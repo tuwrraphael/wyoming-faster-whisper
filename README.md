@@ -1,3 +1,14 @@
+Adapted to CUDA 11.4
+
+After restart I needed to run those commands:
+https://github.com/containers/podman/issues/9926#issuecomment-814665732
+nvidia-modprobe
+sudo modprobe nvidia-uvm
+nvidia-smi
+/usr/bin/nvidia-modprobe -u -c=0
+then I had to run the container privileged one time
+then it worked...
+
 # Wyoming Faster Whisper
 
 [Wyoming protocol](https://github.com/rhasspy/wyoming) server for the [faster-whisper](https://github.com/guillaumekln/faster-whisper/) speech to text system.
